@@ -14,6 +14,19 @@
  * Center the page.
  */
 
+body{
+   /* fallback */ background-color: #fff; 
+   background: url(images/linear_bg_2.png); 
+   background-repeat: repeat-x; 
+   /* Safari 4-5, Chrome 1-9 */ 
+   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bdefff)); 
+   /* Safari 5.1, Chrome 10+ */ 
+   background: -webkit-linear-gradient(top, #fff, #bdefff); 
+   /* Firefox 3.6+ */ background: -moz-linear-gradient(top, #fff, #bdefff); 
+   /* IE 10 */ background: -ms-linear-gradient(top, #fff, #bdefff); 
+   /* Opera 11.10+ */ background: -o-linear-gradient(top, #fff, #bdefff);
+}
+
 #page,
 .region-bottom {
   /* If you want to make the page a fixed width and centered in the viewport,
@@ -22,6 +35,35 @@
   margin-right: auto;
   width: 980px;
 }
+
+/*
+ * Front page layout
+ */
+
+ .front #header {
+    width:960px;
+    height:270px;
+    position:relative;
+ }
+
+ #logo img {
+    position:absolute;
+    width:300px;
+    height:auto;
+ }
+
+#navigation {
+  position: absolute;
+  top: 0; /* Move the navbar up inside #main's padding. */
+  right:0;
+  height: 3em;
+  width: 660px;
+  background-color:#fff;
+}
+
+
+
+
 
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
@@ -73,12 +115,7 @@
   position: relative;
 }
 
-#navigation {
-  position: absolute;
-  top: 0; /* Move the navbar up inside #main's padding. */
-  height: 3em;
-  width: 960px;
-}
+
 
 /*
  * The layout when there is only one sidebar, the left one.
